@@ -1,0 +1,18 @@
+SQL> SELECT * FROM STUDENT;
+
+        SR NAME                    MO DOB           X_MARK CITY                                     
+---------- --------------- ---------- --------- ---------- ----------                               
+       101 HARSHAL NALKAR  8745320912 10-MAY-00       88.4 KASODA                                   
+       102 SAURABH         3476890943 24-DEC-00      70.86 JALGAON                                  
+       103 ARBAZ SHAIKH     985623045 24-MAY-99      45.78 BHADGOAN                                 
+       104 JUNAID          7856098790 21-JUN-98      34.09 FATEPUR                                  
+       105 HITESH PATIL    9800764599 21-NOV-01      67.08 PALDHI                                   
+       106 RAJAN           6790236502 22-JUL-02      45.98 PAROLA                                   
+       107 PRATHAMESH      9087990055 30-MAY-98      89.67 LASALGAONN                               
+       108 VAISHALI        9087659866 15-AUG-01      89.67 NASHIK                                   
+       109 SHUBHANGI       8568900337 12-JUN-98      78.56 KASODA                                   
+       110 HIMANSHU        9088776655 05-FEB-89      35.02 DHULE                                    
+
+10 rows selected.
+
+SQL> SPOOL OFF
