@@ -1,0 +1,124 @@
+SQL> SELECT * FROM STUDENT;
+
+       SID SNAME      BRANCH            PER                                     
+---------- ---------- ---------- ----------                                     
+         1 HARSHAL    ELE                77                                     
+         2 VAISHALI   CSE              77.1                                     
+         3 SWAPANIL   CS               88.2                                     
+         4 ARBAZ      MEC             76.36                                     
+         5 RUSHI      CIVIL           87.23                                     
+         6 PANKAJ     CSE             35.67                                     
+         7 VAIBHAV    ELE             77.34                                     
+         8 SAURABH    MECH             55.9                                     
+         9 JUNAID     CIVIL              72                                     
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> SELECT SNAME
+  2  FROM STUDENT;
+
+SNAME                                                                           
+----------                                                                      
+HARSHAL                                                                         
+VAISHALI                                                                        
+SWAPANIL                                                                        
+ARBAZ                                                                           
+RUSHI                                                                           
+PANKAJ                                                                          
+VAIBHAV                                                                         
+SAURABH                                                                         
+JUNAID                                                                          
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> SELECT NAME, PER
+  2  FROM STUDENT;
+SELECT NAME, PER
+       *
+ERROR at line 1:
+ORA-00904: "NAME": invalid identifier 
+
+
+SQL> ED
+Wrote file afiedt.buf
+
+  1  SELECT SNAME, PER
+  2* FROM STUDENT
+SQL> /
+
+SNAME             PER                                                           
+---------- ----------                                                           
+HARSHAL            77                                                           
+VAISHALI         77.1                                                           
+SWAPANIL         88.2                                                           
+ARBAZ           76.36                                                           
+RUSHI           87.23                                                           
+PANKAJ          35.67                                                           
+VAIBHAV         77.34                                                           
+SAURABH          55.9                                                           
+JUNAID             72                                                           
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> SELECT SNAME, BRANCH
+  2  FROM STUDENT;
+
+SNAME      BRANCH                                                               
+---------- ----------                                                           
+HARSHAL    ELE                                                                  
+VAISHALI   CSE                                                                  
+SWAPANIL   CS                                                                   
+ARBAZ      MEC                                                                  
+RUSHI      CIVIL                                                                
+PANKAJ     CSE                                                                  
+VAIBHAV    ELE                                                                  
+SAURABH    MECH                                                                 
+JUNAID     CIVIL                                                                
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> SELECT SNAME, PER, BRANCH
+  2  FROM STUDENT;
+
+SNAME             PER BRANCH                                                    
+---------- ---------- ----------                                                
+HARSHAL            77 ELE                                                       
+VAISHALI         77.1 CSE                                                       
+SWAPANIL         88.2 CS                                                        
+ARBAZ           76.36 MEC                                                       
+RUSHI           87.23 CIVIL                                                     
+PANKAJ          35.67 CSE                                                       
+VAIBHAV         77.34 ELE                                                       
+SAURABH          55.9 MECH                                                      
+JUNAID             72 CIVIL                                                     
+
+9 rows selected.
+
+SQL> SELECT SNAME, SID, BRANCH, PER
+  2  FROM STUDENT;
+
+SNAME             SID BRANCH            PER                                     
+---------- ---------- ---------- ----------                                     
+HARSHAL             1 ELE                77                                     
+VAISHALI            2 CSE              77.1                                     
+SWAPANIL            3 CS               88.2                                     
+ARBAZ               4 MEC             76.36                                     
+RUSHI               5 CIVIL           87.23                                     
+PANKAJ              6 CSE             35.67                                     
+VAIBHAV             7 ELE             77.34                                     
+SAURABH             8 MECH             55.9                                     
+JUNAID              9 CIVIL              72                                     
+
+9 rows selected.
+
+SQL> 
+SQL> 
+SQL> SPOOL OFF
