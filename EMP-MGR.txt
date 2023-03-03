@@ -1,0 +1,90 @@
+EMP-MGR
+-------------------
+71.WAQTD SMITHS REPORTING MANAGER'S NAME 
+
+ANS-	SELECT ENAME
+	FROM EMP
+	WHERE EMPNO IN (SELECT MGR FROM EMP
+			WHERE ENAME IN 'SMITH');
+-----------------------------------------------------------------
+
+72.WAQTD ADAMS MANAGER'S MANAGER NAME 
+
+ANS-	SELECT ENAME 
+	FROM EMP
+	WHERE EMPNO IN (SELECT MGR FROM EMP
+			WHERE EMPNO IN (SELECT MGR FROM EMP
+ 					WHERE ENAME IN 'ADAMS'));
+-----------------------------------------------------------------
+
+73.WAQTD DNAME OF JONES MANAGER
+
+ANS-	SELECT D1.DNAME 
+	FROM DNAME D1, EMP E1
+	WHERE D1.DEPTNO = E1.DEPTNO
+	AND EMPNO IN (SELECT MGR FROM EMP
+		      WHERE ENAME IN 'JONES');
+-----------------------------------------------------------------	
+
+74.WAQTD MILLER'S MANAGER'S SALARY 
+
+ANS-	SELECT SAL 
+	FROM EMP	
+	WHERE EMPNO IN (SELECT MGR FROM EMP
+			WHERE ENAME IN 'MILLER');
+-----------------------------------------------------------------
+
+75.WAQTD LOC OF SMITH'S MANAGER'S MANAGER.
+
+ANS- 	SELECT D1.LOC
+ 	FROM DEPT D1, EMP E1
+	WHERE D1.DEPTNO = E1. DEPTNO
+ 	AND EMPNO IN (SELECT MGR FROM EMP
+               	       WHERE EMPNO IN (SELECT MGR FROM EMP));
+-----------------------------------------------------------------
+
+76.WAQTD NAME OF THE EMPLOYEES REPORTING TO BLAKE
+
+ANS-    SELECT ENAME 
+	FROM EMP
+	WHERE MGR IN (SELECT EMPNO FROM EMP
+              	      WHERE ENAME IN 'BLAKE');
+-----------------------------------------------------------------
+ 
+77.WAQTD NUMBER OF EMPLPOYEES REPORTING TO KING 
+
+ANS-    SELECT COUNT(*)
+	FROM EMP
+	WHERE MGR IN (SELECT EMPNO FROM EMP
+		      WHERE ENAME IN 'KING');
+-----------------------------------------------------------------
+
+78.WAQTD DETAILS OF THE EMPLOYEES REPORTING TO JONES 
+
+ANS-	SELECT * FROM EMP
+	WHERE MGR IN (SELECT EMPNO FROM EMP 
+		      WHERE ENAME IN 'JONES');
+-----------------------------------------------------------------
+
+79.WAQTD ENAMES OF THE EMPLOYEES REPORTING TO BLAKE'S MANAGER 
+
+ANS-	SELECT ENAME 
+	FROM EMP
+	WHERE MGR IN (SELECT MGR FROM EMP
+		      WHERE ENAME LIKE 'BLAKE');
+-----------------------------------------------------------------
+	
+80.WAQTD NUMBER OF EMPLOYEES REPORTING TO FORD'S MANAGER
+
+
+ANS-	SELECT COUNT(*)
+	FROM EMP
+	WHERE MGR IN (SELECT MGR FROM EMP
+		      WHERE ENAME LIKE 'FORD');
+
+
+
+
+
+
+
